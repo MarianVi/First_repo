@@ -1,0 +1,5 @@
+a = int(input("Te rog introdu primul element: "))
+print(f"Utilizatorul a introdus: {a}")
+b = int(input("Te rog introdu al doilea element: "))
+print(f"Utilizatorul a introdus: {b}")
+print(f"Suma celor doua numere este egala cu: {a+b}")
