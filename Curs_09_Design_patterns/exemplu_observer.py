@@ -114,6 +114,7 @@ class ChatRoom(Observable):
         self.istoric.append(message)
         self.notify()
 
+
 chat = ChatRoom()
 s = Person('Sergiu')
 v = Person('Valentin')

@@ -1,4 +1,5 @@
 from datetime import date
+
 from tabulate import tabulate
 
 """
@@ -47,7 +48,8 @@ print('-' * 40)
 descrie()
 aria()
 perimetrul()
-schimbă_culoarea(noua_culoare) - această metodă nu returneaza nimic. Ea va lua ca și parametru o nouă culoare și va suprascrie atributul self.culoare. Poți verifica schimbarea culorii prin apelarea metodei descrie().
+schimbă_culoarea(noua_culoare) - această metodă nu returneaza nimic. Ea va lua ca și parametru o nouă culoare și 
+va suprascrie atributul self.culoare. Poți verifica schimbarea culorii prin apelarea metodei descrie().
 """
 
 
@@ -162,7 +164,8 @@ cont1.creditare_cont(10000)
 print('-' * 40)
 """
 5. Clasa Factură
-     Atribute: seria (va fi constantă, nu trebuie constructor, toate facturile vor avea aceeași serie), număr, nume_produs, cantitate, pret_buc
+     Atribute: seria (va fi constantă, nu trebuie constructor, toate facturile vor avea aceeași serie), 
+        număr, nume_produs, cantitate, pret_buc
      Constructor: toate atributele, fără serie
      Metode:
 schimbă_cantitatea(cantitate)
@@ -201,12 +204,14 @@ class Factura:
         """print("Factura seria", Factura.seria, "numarul", self.numar)
         print("Data:", data)
         print("Produs  \t|\tCantitate\t|\tPret bucata\t|\tTotal")
-        print(self.nume_produs,"\t|\t", self.cantitate, "\t\t|\t", self.pret_buc, "\t\t|\t", total) """       # Modalitate de creare a unui tabel direct in Python
+        print(self.nume_produs,"\t|\t", self.cantitate, "\t\t|\t", self.pret_buc, "\t\t|\t", total) """
+        # Modalitate de creare a unui tabel direct in Python
         col_names = [[self.nume_produs, self.cantitate, self.pret_buc, total]]
         header = ['Produs', 'Cantitate', 'Pret bucata', 'Total']
         print("Factura seria", Factura.seria, "numarul", self.numar)
         print("Data:", data)
         print(tabulate(col_names, headers=header, tablefmt="grid"))
+
 
 factura1 = Factura(1, 'Telefon', 7, 700)
 factura1.genereaza_tabel()
